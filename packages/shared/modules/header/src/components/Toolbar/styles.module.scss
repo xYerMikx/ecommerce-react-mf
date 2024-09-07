@@ -1,0 +1,10 @@
+.toolbar {
+  background-color: #1677ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > * {
+    color: #ffffff;
+  }
+}

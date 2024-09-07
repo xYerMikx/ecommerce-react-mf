@@ -1,5 +1,6 @@
-import { productFetchers } from "@/server/fetchers";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+
+import { productFetchers } from "@/server/fetchers";
 
 export const fetchProductsThunk = createAsyncThunk(
   "products/fetchProducts",

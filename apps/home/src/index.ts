@@ -1,1 +1,1 @@
-import("./App");
+export { renderHome } from "./App";

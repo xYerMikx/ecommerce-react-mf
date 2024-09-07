@@ -1,6 +1,7 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 import { fetchProductsThunk } from "@/redux/thunks/fetchProductsThunk";
 import { Product } from "@/types/product";
-import { createSlice } from "@reduxjs/toolkit";
 
 export type ProductsState = {
   products: Product[];

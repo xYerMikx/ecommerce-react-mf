@@ -1,9 +1,9 @@
 ///<reference types="react" />
 
 declare module "header/Header" {
-  import { ComponentType } from "react";
+  export function renderHeader(containerId: string): void;
+}
 
-  const Header: ComponentType<any>;
-
-  export default Header;
+declare module "home/Home" {
+  export function renderHome(containerId: string): void;
 }

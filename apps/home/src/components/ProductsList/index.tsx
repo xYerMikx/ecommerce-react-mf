@@ -1,9 +1,10 @@
+import React, { useEffect } from "react";
+import { Flex } from "antd";
+
 import { ProductCard } from "@/components/ProductCard";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { selectProducts } from "@/redux/selectors/products";
 import { fetchProductsThunk } from "@/redux/thunks/fetchProductsThunk";
-import React, { useEffect } from "react";
-import { Flex } from "antd";
 
 export const ProductsList = () => {
   const dispatch = useAppDispatch();

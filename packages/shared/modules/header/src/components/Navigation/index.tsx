@@ -1,4 +1,5 @@
-import { headerLinks } from "@/constants/headerLinks";
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   SearchOutlined,
   ShoppingOutlined,
@@ -6,9 +7,10 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { Flex, Layout, Menu, Space } from "antd";
-import React from "react";
+
+import { headerLinks } from "@/constants/headerLinks";
+
 import styles from "./styles.module.scss";
-import { Link } from "react-router-dom";
 
 const { Header: NavigationHeader } = Layout;
 

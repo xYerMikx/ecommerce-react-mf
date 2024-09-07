@@ -66,6 +66,7 @@ module.exports = (_, argv) => ({
       filename: "ecommerce.js",
       remotes: {
         header: "header@http://localhost:3000/header.js",
+        home: "home@http://localhost:3001/homepage.js",
       },
       exposes: {},
       shared: {

@@ -69,7 +69,7 @@ module.exports = (_, argv) => ({
       filename: "header.js",
       remotes: {},
       exposes: {
-        "./Header": "./src/App.tsx",
+        "./Header": "./src/index.ts",
       },
       shared: {
         ...deps,

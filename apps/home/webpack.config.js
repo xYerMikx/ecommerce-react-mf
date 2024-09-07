@@ -9,15 +9,18 @@ const printCompilationMessage = require("./compilation.config.js");
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:3001/",
   },
 
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+    alias: {
+      "@": path.resolve(__dirname, "src/"),
+    },
   },
 
   devServer: {
-    port: 8080,
+    port: 3001,
     historyApiFallback: true,
     watchFiles: [path.resolve(__dirname, "src")],
     onListening: function (devServer) {
@@ -62,13 +65,12 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "ecommerce-react-shop",
-      filename: "ecommerce.js",
-      remotes: {
-        header: "header@http://localhost:3000/header.js",
-        home: "home@http://localhost:3001/homepage.js",
+      name: "home",
+      filename: "homepage.js",
+      remotes: {},
+      exposes: {
+        "./Home": "./src/index.ts",
       },
-      exposes: {},
       shared: {
         ...deps,
         react: {

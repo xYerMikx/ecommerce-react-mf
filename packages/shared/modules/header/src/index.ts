@@ -1,1 +1,1 @@
-import("./App");
+export { renderHeader } from "./App";

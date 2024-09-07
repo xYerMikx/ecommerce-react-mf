@@ -7,9 +7,11 @@ const deps = require("./package.json").dependencies;
 
 const printCompilationMessage = require("./compilation.config.js");
 
+const PORT = process.env.PORT || 8080;
+
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: `http://localhost:${PORT}/`,
   },
 
   resolve: {
@@ -17,9 +19,10 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    port: 8080,
+    port: PORT,
     historyApiFallback: true,
     watchFiles: [path.resolve(__dirname, "src")],
+    open: true,
     onListening: function (devServer) {
       const port = devServer.server.address().port;
 

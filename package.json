@@ -13,5 +13,6 @@
   },
   "devDependencies": {
     "lerna": "^8.1.8"
-  }
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }

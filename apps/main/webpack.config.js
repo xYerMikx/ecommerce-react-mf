@@ -10,9 +10,7 @@ const printCompilationMessage = require("./compilation.config.js");
 const PORT = process.env.PORT || 8080;
 
 module.exports = (_, argv) => ({
-  output: {
-    publicPath: `http://localhost:${PORT}/`,
-  },
+  output: {},
 
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
